@@ -7,16 +7,16 @@ const App = () => {
   const [value, setValue] = useState("");
 
   return (
-    <div className="bg-black w-screen text-white h-screen flex items-center justify-center">
-      <div className="text-center bg-gray-800 absolute top-10 p-6 rounded-lg shadow-lg">
-        <div className="text-4xl text-gray-200 font-semibold">
+    <div className="bg-black w-screen min-h-screen text-white flex items-center justify-center px-4 py-20">
+      <div className="text-center bg-gray-800 fixed top-4 left-1/2 -translate-x-1/2 p-4 sm:p-6 rounded-lg shadow-lg w-[90%] max-w-md">
+        <div className="text-2xl sm:text-4xl text-gray-200 font-semibold">
           weCaptcha
         </div>
-        <div className="text-xl mt-2 font-mono">for farji backend developers</div>
+        <div className="text-lg sm:text-xl mt-2 font-mono">for phis-phis backend developers</div>
       </div>
 
-      <div className="flex flex-col items-center space-y-6">
-        <form className="bg-gray-800 p-8 rounded-lg shadow-xl w-96">
+      <div className="flex flex-col items-center space-y-6 w-full max-w-md mt-16">
+        <form className="bg-gray-800 p-4 sm:p-8 rounded-lg shadow-xl w-full">
           <div className="mb-4">
             <label className="block text-gray-300 text-sm font-bold mb-2">
               Site Key
@@ -28,14 +28,15 @@ const App = () => {
               placeholder="Enter your site key"
             />
           </div>
-          <ReCAPTCHA
-            sitekey={key}
-            theme="dark"
-            className="flex justify-center"
-            onChange={(e) => {
-              setValue(e);
-            }}
-          />
+          <div className="flex justify-center">
+            <ReCAPTCHA
+              sitekey={key}
+              theme="dark"
+              onChange={(e) => {
+                setValue(e);
+              }}
+            />
+          </div>
 
           <button
             onClick={() => {
@@ -49,12 +50,12 @@ const App = () => {
           </button>
         </form>
 
-        <div className="bg-gray-800 p-6 rounded-lg shadow-xl w-96">
+        <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-xl w-full">
           <h3 className="text-gray-300 text-sm font-bold mb-2">
             Captcha Token
           </h3>
           <div className="bg-gray-700 p-3 rounded flex items-center justify-between">
-            <p className="text-gray-300 font-mono text-sm h-14 overflow-clip break-all flex-1">
+            <p className="text-gray-300 font-mono text-sm max-h-14 overflow-clip break-all flex-1">
               {value ? value : "Token will appear here..."}
             </p>
             {value && (
