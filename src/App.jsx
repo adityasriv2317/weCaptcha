@@ -69,6 +69,10 @@ const App = () => {
             )}
           </div>
         </div>
+
+        <div className="text-center text-gray-400 text-sm px-4">
+          Remember to add this domain to the reCAPTCHA console !!!
+        </div>
       </div>
     </div>
   );
