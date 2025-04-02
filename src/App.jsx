@@ -42,7 +42,7 @@ const App = () => {
 
           <button
             onClick={() => {
-              setKey("6LcQ9poqAAAAAEmU3sOsQmC0vdLUV-lqCC2TR0uN");
+              setKey("6Lcl0AcrAAAAABFUCNtfvuTZYq5z_rWYAWpvkkNV");
               setValue("");
             }}
             className="mt-4 w-full bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
